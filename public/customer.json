@@ -1,0 +1,110 @@
+[
+  {
+    "id": "TCK-001",
+    "title": "Login not working",
+    "description": "User reports being unable to log in using correct credentials.",
+    "customer": "Acme Corp",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-11-20"
+  },
+  {
+    "id": "TCK-002",
+    "title": "Invoice not generated",
+    "description": "Monthly invoice failed to generate for customer.",
+    "customer": "Bright Solutions",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2025-11-21"
+  },
+  {
+    "id": "TCK-003",
+    "title": "Email notifications delayed",
+    "description": "Notifications take up to 30 minutes to send.",
+    "customer": "Zenith Media",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2025-11-21"
+  },
+  {
+    "id": "TCK-004",
+    "title": "API rate limit issues",
+    "description": "Client receiving rate limit errors below threshold.",
+    "customer": "TechFlow",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-11-22"
+  },
+  {
+    "id": "TCK-005",
+    "title": "Dashboard loading slowly",
+    "description": "Dashboard takes over 20 seconds to load after login.",
+    "customer": "Global Logistics",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2025-11-22"
+  },
+  {
+    "id": "TCK-006",
+    "title": "Password reset email not received",
+    "description": "Customer unable to receive password reset instructions.",
+    "customer": "BlueStar Inc.",
+    "priority": "Low",
+    "status": "Resolved",
+    "createdAt": "2025-11-23"
+  },
+  {
+    "id": "TCK-007",
+    "title": "Data sync failure",
+    "description": "CRM data not syncing across devices.",
+    "customer": "Nova Retail",
+    "priority": "Critical",
+    "status": "Open",
+    "createdAt": "2025-11-23"
+  },
+  {
+    "id": "TCK-008",
+    "title": "Subscription upgrade not reflecting",
+    "description": "Customer upgraded plan but still sees old limits.",
+    "customer": "Peak Performance",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-11-24"
+  },
+  {
+    "id": "TCK-009",
+    "title": "Mobile app crashes",
+    "description": "App crashes on launch for Android version 15.",
+    "customer": "CityFit",
+    "priority": "Critical",
+    "status": "Open",
+    "createdAt": "2025-11-24"
+  },
+  {
+    "id": "TCK-010",
+    "title": "Incorrect report totals",
+    "description": "Sales report shows inconsistent totals compared to database.",
+    "customer": "Alpha Trading",
+    "priority": "High",
+    "status": "Investigating",
+    "createdAt": "2025-11-25"
+  },
+  {
+    "id": "TCK-011",
+    "title": "Two-factor authentication failing",
+    "description": "Customer is not receiving 2FA codes.",
+    "customer": "SecureNet",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2025-11-25"
+  },
+  {
+    "id": "TCK-012",
+    "title": "UI layout broken on Safari",
+    "description": "Page elements overlap on Safari 18.",
+    "customer": "Orbit Finance",
+    "priority": "Low",
+    "status": "Resolved",
+    "createdAt": "2025-11-26"
+  }
+]
