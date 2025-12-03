@@ -1,45 +1,24 @@
-import React from 'react';
-import calander from '../../assets/ri_calendar-line.png'
-const Support = () => {
+import { use } from 'react';
+import Card from '../Card/Card';
+const Support = ({ CustomerDetails }) => {
+    const AllCustomers = use(CustomerDetails);
+    //console.log(AllCustomers);
     return (
         <div className='w-full px-2 md:w-[1500px] mx-auto mt-20 mb-10 root'>
             <p className='font-semibold text-2xl mb-4'>Customer Tickets</p>
-            <div className='bg-white border-2 border-red-400 w-[40%] p-2'>
-                <div className='flex gap-3 justify-between'>
-                    <div>
-                        <p className='font-medium text-[1.2rem]'>Login Issues - Can't Access Account</p>
-                    </div>
-                    <div>
-                        <div className='flex items-center gap-2 bg-[#baf7cf] px-3 py-1 rounded-2xl'>
-                            <div className='bg-[#02a63b] h-4 w-4 rounded-4xl flex items-center'>
-                            </div>
-                            <div className='flex items-center'>
-                                <p className='text-xl -mt-1'>open</p>
-                            </div>
-                        </div>
-                    </div>
+            {/* <Card></Card> */}
+            <div className='grid grid-cols-12 gap-4'>
+                <div className=' col-span-12 md:col-span-10 grid grid-cols-1 md:grid-cols-2 gap-2'>
+                    {
+                        AllCustomers.map(Customer => <Card></Card>)
+                    }
                 </div>
-
-                <div className='mt-1 text-gray-500'>
-                    <p className='text-[1.1rem]'>Customer is unable to log in to their account. They've tried resetting their password multiple times but still...</p>
-                </div>
-                <div className='flex justify-between mt-3'>
-                    <div className=' flex '>
-                        <div>
-                            <p className='text-gray-400 mr-2 font-semibold'>#1001</p>
-                        </div>
-                        <div>
-                            <p>HIGH PRIORITY</p>
-                        </div>
+                <div className='col-span-2'>
+                    <div className='border-2 border-amber-950'>
+                        <p>Hello</p>
                     </div>
-                    <div className='flex'>
-                        <div className='mr-2'>
-                            <p className='text-gray-400'>John Smith</p>
-                        </div>
-                        <div className='flex'>
-                            <img src={calander} alt="" />
-                            <p className='ml-2 text-gray-400'>1/15/2024</p>
-                        </div>
+                    <div className=' border-2 border-amber-600'>
+                        <p>Wellcome</p>
                     </div>
                 </div>
             </div>
