@@ -7,10 +7,10 @@ const Support = ({ CustomerDetails }) => {
         <div className='w-full grid grid-cols-1 md:w-[1500px] mx-auto mt-20 mb-10 root'>
             {/* <p className='font-semibold text-2xl mb-4'>Customer Tickets</p> */}
             {/* <Card></Card> */}
-            <div className='grid md:grid-cols-12 gap-2'>
+            <div className='grid md:grid-cols-12 gap-3'>
                 <div className='grid grid-cols-1 md:grid-cols-2 col-span-9 gap-2'>
                     {
-                        AllCustomers.map(Customer => <Card></Card>)
+                        AllCustomers.map(Customer => <Card Customer={Customer}></Card>)
                     }
                 </div>
                 <div className='hidden md:block h-230 overflow-hidden overflow-y-auto col-span-3'>

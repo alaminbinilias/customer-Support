@@ -14,7 +14,7 @@ const CustomerPromise= async()=>{
 //console.log(CustomerPromise());
 
 const CustomerDetails=CustomerPromise();
-// console.log(CustomerDetails);
+//console.log(CustomerDetails);
 
 
 function App() {

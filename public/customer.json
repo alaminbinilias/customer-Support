@@ -1,110 +1,110 @@
 [
   {
-    "id": "TCK-001",
+    "id": "1001",
     "title": "Login not working",
-    "description": "User reports being unable to log in using correct credentials.",
+    "description": "Users cannot log in with correct credentials. Authentication fails across devices, possibly due to identity service...",
     "customer": "Acme Corp",
-    "priority": "High",
+    "priority": "High priority",
     "status": "Open",
-    "createdAt": "2025-11-20"
+    "createdAt": "2025/11/20"
   },
   {
-    "id": "TCK-002",
+    "id": "1002",
     "title": "Invoice not generated",
-    "description": "Monthly invoice failed to generate for customer.",
+    "description": "Monthly invoice failed to generate. Logs indicate premature process termination, possibly caused by billing...",
     "customer": "Bright Solutions",
-    "priority": "Medium",
+    "priority": "Medium priority",
     "status": "In Progress",
-    "createdAt": "2025-11-21"
+    "createdAt": "2025/11/21"
   },
   {
-    "id": "TCK-003",
+    "id": "1013",
     "title": "Email notifications delayed",
-    "description": "Notifications take up to 30 minutes to send.",
+    "description": "Emails are delayed by 20–30 minutes. Likely caused by high queue volume or temporary email service performance degradation...",
     "customer": "Zenith Media",
-    "priority": "Low",
+    "priority": "Low priority",
     "status": "Open",
-    "createdAt": "2025-11-21"
+    "createdAt": "2025/11/21"
   },
   {
-    "id": "TCK-004",
+    "id": "1004",
     "title": "API rate limit issues",
-    "description": "Client receiving rate limit errors below threshold.",
+    "description": "Customer experiences rate-limit errors despite low usage. Logs suggest incorrect counter resets or shared limits...",
     "customer": "TechFlow",
-    "priority": "High",
+    "priority": "High priority",
     "status": "Open",
-    "createdAt": "2025-11-22"
+    "createdAt": "2025/11/22"
   },
   {
-    "id": "TCK-005",
+    "id": "1023",
     "title": "Dashboard loading slowly",
-    "description": "Dashboard takes over 20 seconds to load after login.",
+    "description": "Dashboard takes over 20 seconds to load. Backend API calls are slow, possibly caused by inefficient queries or large data widgets...",
     "customer": "Global Logistics",
-    "priority": "Medium",
+    "priority": "Medium priority",
     "status": "In Progress",
-    "createdAt": "2025-11-22"
+    "createdAt": "2025/11/22"
   },
   {
-    "id": "TCK-006",
+    "id": "1005",
     "title": "Password reset email not received",
-    "description": "Customer unable to receive password reset instructions.",
+    "description": "Password reset emails are not delivered. Emails appear queued but unprocessed, indicating possible SMTP or mail service issues...",
     "customer": "BlueStar Inc.",
-    "priority": "Low",
-    "status": "Resolved",
-    "createdAt": "2025-11-23"
-  },
-  {
-    "id": "TCK-007",
-    "title": "Data sync failure",
-    "description": "CRM data not syncing across devices.",
-    "customer": "Nova Retail",
-    "priority": "Critical",
-    "status": "Open",
-    "createdAt": "2025-11-23"
-  },
-  {
-    "id": "TCK-008",
-    "title": "Subscription upgrade not reflecting",
-    "description": "Customer upgraded plan but still sees old limits.",
-    "customer": "Peak Performance",
-    "priority": "High",
+    "priority": "Low priority",
     "status": "In Progress",
-    "createdAt": "2025-11-24"
+    "createdAt": "2025/11/23"
   },
   {
-    "id": "TCK-009",
+    "id": "1009",
+    "title": "Data sync failure",
+    "description": "CRM data fails to sync across devices. Logs show timeouts and partial updates, likely caused by sync scheduler...",
+    "customer": "Nova Retail",
+    "priority": "Low priority",
+    "status": "Open",
+    "createdAt": "2025/11/23"
+  },
+  {
+    "id": "1008",
+    "title": "Subscription upgrade not reflecting",
+    "description": "Plan upgrade processed, but account still shows old limits. Likely due to entitlement propagation failure or service delay...",
+    "customer": "Peak Performance",
+    "priority": "High priority",
+    "status": "In Progress",
+    "createdAt": "2025/11/24"
+  },
+  {
+    "id": "1006",
     "title": "Mobile app crashes",
-    "description": "App crashes on launch for Android version 15.",
+    "description": "App crashes on Android 15 launch. Logs show null pointer exceptions, possibly due to API changes or missing permissions...",
     "customer": "CityFit",
-    "priority": "Critical",
-    "status": "Open",
-    "createdAt": "2025-11-24"
+    "priority": "High priority",
+    "status": "In Progress",
+    "createdAt": "2025/11/24"
   },
   {
-    "id": "TCK-010",
+    "id": "1010",
     "title": "Incorrect report totals",
-    "description": "Sales report shows inconsistent totals compared to database.",
+    "description": "Sales report totals differ from database records. Likely caused by caching issues, aggregation errors, or timezone discrepancies...",
     "customer": "Alpha Trading",
-    "priority": "High",
-    "status": "Investigating",
-    "createdAt": "2025-11-25"
-  },
-  {
-    "id": "TCK-011",
-    "title": "Two-factor authentication failing",
-    "description": "Customer is not receiving 2FA codes.",
-    "customer": "SecureNet",
-    "priority": "Medium",
+    "priority": "High priority",
     "status": "Open",
-    "createdAt": "2025-11-25"
+    "createdAt": "2025/11/25"
   },
   {
-    "id": "TCK-012",
+    "id": "1011",
+    "title": "Two-factor authentication failing",
+    "description": "2FA codes not sent via SMS or email. Logs show no outgoing messages, suggesting MFA service malfunction or disabled triggers...",
+    "customer": "SecureNet",
+    "priority": "Medium priority",
+    "status": "Open",
+    "createdAt": "2025/11/25"
+  },
+  {
+    "id": "1013",
     "title": "UI layout broken on Safari",
-    "description": "Page elements overlap on Safari 18.",
+    "description": "Safari 18 shows overlapping UI elements. Likely caused by browser-specific CSS rendering differences requiring layout adjustments...",
     "customer": "Orbit Finance",
-    "priority": "Low",
-    "status": "Resolved",
-    "createdAt": "2025-11-26"
+    "priority": "Low priority",
+    "status": "Open",
+    "createdAt": "2025/11/26"
   }
 ]
