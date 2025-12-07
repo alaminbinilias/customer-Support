@@ -92,7 +92,7 @@
   {
     "id": "1011",
     "title": "Two-factor authentication failing",
-    "description": "2FA codes not sent via SMS or email. Logs show no outgoing messages, suggesting MFA service malfunction or disabled triggers...",
+    "description": "2FA codes not sent via SMS or email. Logs show no, suggesting MFA service malfunction or disabled triggers...",
     "customer": "SecureNet",
     "priority": "Medium priority",
     "status": "Open",

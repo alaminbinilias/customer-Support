@@ -1,10 +1,16 @@
-import React from 'react';
+import { toast } from 'react-toastify';
 import calander from '../../assets/ri_calendar-line.png'
-const Card = ({Customer}) => {
-    console.log(Customer);
+const Card = ({Customer,task,setTask}) => {
+    //console.log(Customer);
+    const ClickHandle=(Cus)=>{
+        // alert("Task Selected");
+        toast("Task Selected");
+        setTask([...task,Cus.title]);
+    }
+
     return (
         <div>
-            <div className='bg-white shadow-sm p-3'>
+            <div onClick={()=>{ClickHandle(Customer)}} className='bg-white shadow-sm p-3 cursor-pointer'>
                 <div className='flex gap-3 justify-between'>
                     <div>
                         <p className='font-medium text-[1.2rem]'>{Customer.title}</p>
