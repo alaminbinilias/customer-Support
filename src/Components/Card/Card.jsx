@@ -5,7 +5,7 @@ const Card = ({Customer,task,setTask}) => {
     const ClickHandle=(Cus)=>{
         // alert("Task Selected");
         toast("Task Selected");
-        setTask([...task,Cus.title]);
+        setTask([...task,Cus]);
     }
 
     return (

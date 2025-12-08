@@ -21,13 +21,15 @@ const CustomerDetails = CustomerPromise();
 function App() {
 
   const [task,setTask]=useState([]);
+  const [resolvedTask,setresolvedTask]=useState([]);
+  console.log(resolvedTask);
   console.log(task);
   return (
     <>
       <Navber></Navber>
-      <Banner task={task}></Banner>
+      <Banner task={task} resolvedTask={resolvedTask}></Banner>
       <Suspense fallback={<span className="loading loading-bars loading-xl"></span>}>
-        <Support CustomerDetails={CustomerDetails} task={task} setTask={setTask}></Support>
+        <Support CustomerDetails={CustomerDetails} task={task} setTask={setTask} resolvedTask={resolvedTask} setresolvedTask={setresolvedTask}></Support>
       </Suspense>
       <Footer></Footer>
       <ToastContainer />

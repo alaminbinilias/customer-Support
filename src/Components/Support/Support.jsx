@@ -1,10 +1,20 @@
 import { use} from 'react';
 import Card from '../Card/Card';
 import StatusSection from '../StatusSection/StatusSection';
-const Support = ({ CustomerDetails,task,setTask}) => {
+import ResolveSection from '../ResolveSection/ResolveSection';
+const Support = ({ CustomerDetails,task,setTask,resolvedTask,setresolvedTask}) => {
     const AllCustomers = use(CustomerDetails);
-    //console.log(AllCustomers);
-
+    //console.log(AllCustomers[0].id);
+    //console.log(task);
+    const resolveTask=(p)=>{
+        console.log(p);
+        const flterData=task.find(tsk=>tsk.id===p);
+        //console.log(flterData);
+        setresolvedTask([...resolvedTask,flterData]);
+        const removeStatusCard=task.filter(Tsk=>Tsk.id!=p);
+        console.log(removeStatusCard);
+        setTask(removeStatusCard);
+    }
     return (
         <div className='w-full grid grid-cols-1 md:w-[1500px] mx-auto mt-20 mb-10 root'>
             
@@ -24,7 +34,7 @@ const Support = ({ CustomerDetails,task,setTask}) => {
 
                         <div className="card w-full card-sm shadow-sm mt-2">
                             {
-                                task.map(tsk=><StatusSection tsk={tsk}></StatusSection>)
+                                task.map(tsk=><StatusSection tsk={tsk} resolveTask={resolveTask}></StatusSection>)
                             }
                         </div>
 
@@ -36,10 +46,10 @@ const Support = ({ CustomerDetails,task,setTask}) => {
 
                         <div className='border-amber-950 h-92 overflow-y-auto'>
 
-                        <div className="card w-full bg-base-100 card-sm p-0 shadow-sm mb-2 mt-2">
-                            <div className="bg-[#e0e8ff] p-1">
-                                <h2 className="font-semibold text-[1.2rem] text-center mb-1">Payment Failed - Card Declined</h2>
-                            </div>
+                        <div className="card w-full card-sm p-0 shadow-sm mb-2 mt-2">
+                            {
+                                resolvedTask.map(resolveTask=><ResolveSection resolveTask={resolveTask}></ResolveSection>)
+                            }
                         </div>
                     </div>
                     </div>

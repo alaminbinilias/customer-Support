@@ -1,7 +1,7 @@
 import React from 'react';
 import wave from '../../assets/role.png'
 import waves from '../../assets/Clip path group (1).png'
-const Banner = ({task}) => {
+const Banner = ({task,resolvedTask}) => {
     return (
         <div className=' w-full px-2 md:w-[1500px] mx-auto mt-20'>
             <div className=' grid grid-cols-1 md:grid-cols-2 gap-3'>
@@ -26,7 +26,7 @@ const Banner = ({task}) => {
                     </div>
                     <div className='md:w-full md:-ml-180'>
                         <p className='text-white  text-[2rem]'>Resolved</p>
-                        <p className='text-white  text-[4rem] font-semibold'>0</p>
+                        <p className='text-white  text-[4rem] font-semibold'>{resolvedTask.length}</p>
                     </div>
                 </div>
             </div>
