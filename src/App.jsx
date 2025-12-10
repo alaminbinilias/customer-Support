@@ -8,7 +8,7 @@ import Support from './Components/Support/Support'
 import Footer from './Components/Footer/Footer'
 
 const CustomerPromise = async () => {
-  const CustomerData = await fetch('../public/customer.json');
+  const CustomerData = await fetch('./customer.json');
   return CustomerData.json();
 }
 
@@ -22,8 +22,8 @@ function App() {
 
   const [task,setTask]=useState([]);
   const [resolvedTask,setresolvedTask]=useState([]);
-  console.log(resolvedTask);
-  console.log(task);
+  //console.log(resolvedTask);
+  //console.log(task);
   return (
     <>
       <Navber></Navber>

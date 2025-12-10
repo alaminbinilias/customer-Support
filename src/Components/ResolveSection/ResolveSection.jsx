@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ResolveSection = ({resolveTask}) => {
-    console.log(resolveTask);
+    //console.log(resolveTask);
     return (
         <div className=' p-1'>
             <div className="bg-[#e0e8ff] mb-1 w-full rounded-sm">
