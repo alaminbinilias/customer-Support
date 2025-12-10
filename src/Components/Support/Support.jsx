@@ -2,6 +2,9 @@ import { use, useState } from 'react';
 import Card from '../Card/Card';
 import StatusSection from '../StatusSection/StatusSection';
 import ResolveSection from '../ResolveSection/ResolveSection';
+import taskImg from '../../assets/tsk.png'
+
+
 const Support = ({ CustomerDetails, task, setTask, resolvedTask, setresolvedTask }) => {
     const AllCustomers = use(CustomerDetails);
     //console.log(AllCustomers[0].id);
@@ -24,9 +27,9 @@ const Support = ({ CustomerDetails, task, setTask, resolvedTask, setresolvedTask
         setflterDataSet(removeSpecificDataSet);
     }
     return (
-        <div className='w-full grid grid-cols-1 md:w-[1500px] mx-auto mt-20 mb-10 root'>
+        <div className='grid grid-cols-1 md:w-[1500px] mx-auto mt-20 mb-10 root'>
 
-            <div className='px-2 grid grid-cols-12 gap-4 items-center justify-between'>
+            <div className='px-4 w-full grid grid-cols-12 gap-4 items-center justify-between'>
                 <p className='font-semibold text-2xl mb-4 col-span-9'>Customer Tickets</p>
                 <p className=' hidden md:block font-semibold text-2xl mb-4 col-span-3'>Task Status</p>
 
@@ -35,11 +38,52 @@ const Support = ({ CustomerDetails, task, setTask, resolvedTask, setresolvedTask
 
 
                 {/* Open the modal using document.getElementById('ID').showModal() method */}
-                <button className="btn border-4 px-9 mx-auto justify-center block md:hidden" onClick={() => document.getElementById('my_modal_2').showModal()}>Task</button>
+                <img onClick={() => document.getElementById('my_modal_2').showModal()} className='w-10 h-10 mb-3 ml-20' src={taskImg} alt="" />
                 <dialog id="my_modal_2" className="modal">
                     <div className="modal-box">
-                        <h3 className="font-bold text-lg">Hello!</h3>
-                        <p className="py-4">Press ESC key or click outside to close</p>
+
+                        <h3 className="font-bold text-lg">Task Status</h3>
+
+
+                        <div className='overflow-hidden overflow-y-auto'>
+                            <div className='overflow-y-auto'>
+
+                                <div className="card w-full card-sm shadow-sm mt-2">
+                                    {
+                                        task.map(tsk => <StatusSection tsk={tsk} resolveTask={resolveTask}></StatusSection>)
+                                    }
+                                </div>
+
+
+                            </div>
+                            <div className='overflow-y-auto'>
+
+                                <p className='mt-3 mb-3 font-bold text-lg'>Resolved Task</p>
+
+                                <div className='border-amber-950 h-92 overflow-y-auto'>
+
+                                    <div className="card w-full card-sm p-0 shadow-sm mb-2 mt-2">
+                                        {
+                                            resolvedTask.map(resolveTask => <ResolveSection resolveTask={resolveTask}></ResolveSection>)
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     </div>
                     <form method="dialog" className="modal-backdrop">
                         <button>close</button>
