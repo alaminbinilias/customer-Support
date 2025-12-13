@@ -38,7 +38,7 @@ const Support = ({ CustomerDetails, task, setTask, resolvedTask, setresolvedTask
 
 
                 {/* Open the modal using document.getElementById('ID').showModal() method */}
-                <img onClick={() => document.getElementById('my_modal_2').showModal()} className='w-10 h-10 mb-3 ml-20' src={taskImg} alt="" />
+                <img onClick={() => document.getElementById('my_modal_2').showModal()} className=' mb-3 ml-20 block md:hidden' src={taskImg} alt="" />
                 <dialog id="my_modal_2" className="modal">
                     <div className="modal-box">
 
