@@ -1,6 +1,6 @@
-import { ToastContainer} from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 
-import { Suspense, useState} from 'react'
+import { Suspense, useState } from 'react'
 import './App.css'
 import Banner from './Components/Banner/Banner'
 import Navber from './Components/Navber/Navber'
@@ -20,19 +20,21 @@ const CustomerDetails = CustomerPromise();
 
 function App() {
 
-  const [task,setTask]=useState([]);
-  const [resolvedTask,setresolvedTask]=useState([]);
+  const [task, setTask] = useState([]);
+  const [resolvedTask, setresolvedTask] = useState([]);
   //console.log(resolvedTask);
   //console.log(task);
   return (
     <>
-      <Navber></Navber>
-      <Banner task={task} resolvedTask={resolvedTask}></Banner>
-      <Suspense fallback={<span className="loading loading-bars loading-xl"></span>}>
-        <Support CustomerDetails={CustomerDetails} task={task} setTask={setTask} resolvedTask={resolvedTask} setresolvedTask={setresolvedTask}></Support>
-      </Suspense>
-      <Footer></Footer>
-      <ToastContainer />
+      <div className='md:w-[1500px] mx-auto mt-20 mb-10'>
+        <Navber></Navber>
+        <Banner task={task} resolvedTask={resolvedTask}></Banner>
+        <Suspense fallback={<span className="loading loading-bars loading-xl mt-10"></span>}>
+          <Support CustomerDetails={CustomerDetails} task={task} setTask={setTask} resolvedTask={resolvedTask} setresolvedTask={setresolvedTask}></Support>
+        </Suspense>
+        <Footer></Footer>
+        <ToastContainer />
+      </div>
     </>
   )
 }
