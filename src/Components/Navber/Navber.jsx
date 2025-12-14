@@ -4,7 +4,7 @@ import plus from '../../assets/Plus.png'
 
 const Navber = () => {
     return (
-        <div className='bg-base-100 shadow-sm'>
+        <div className='bg-base-100 shadow-sm -mt-19'>
             <div className='w-full md:w-[1500px] mx-auto p-4'>
                 <div className='flex items-center justify-between'>
                     <div className='p-0'>
